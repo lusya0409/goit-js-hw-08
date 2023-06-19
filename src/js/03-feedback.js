@@ -29,5 +29,5 @@ function onFormSubmit(e) {
 }
 
 function getFormState() {
-  return JSON.parse(localStorage.getItem('feedback-form-state'));
+  return JSON.parse(localStorage.getItem('feedback-form-state')) || '';
 }
