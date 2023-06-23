@@ -25,11 +25,10 @@ function onFormSubmit(e) {
   e.preventDefault();
 
   console.log(getFormState());
-
-  formEl.reset();
+  e.target.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
 
 function getFormState() {
-  return JSON.parse(localStorage.getItem(STORAGE_KEY));
+  return JSON.parse(localStorage.getItem(STORAGE_KEY ?? ''));
 }
